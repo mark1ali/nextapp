@@ -35,18 +35,21 @@ const ListAllUsers = ( { allUsers }) => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
-                <tr key={user.id}>
+            {users.map((user) => {
+              let secureImageUrl = user.profile_path.replace("http://", "https://");
+              return (<tr key={user.id}>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.companyName}</td>
-                <td><Image src={user.profile_path} height={50} width={50} alt="List Image"  className="rounded-lg shadow-lg" unoptimized={true}  /></td>
+                <td><Image src={secureImageUrl} height={50} width={50} alt="List Image"  className="rounded-lg shadow-lg" unoptimized={true}  /></td>
                 <td>
                 <Link href={`/users/edit-user/${user.id}`} >Edit User</Link>
                 <button onClick={() => deleteUser(user.id)}>Delete User</button>
                 </td>
-                </tr>
-            ))}
+                </tr>);
+              
+            }
+            )}
           </tbody>
         </table>
       </div>

@@ -15,9 +15,9 @@ export default function UserForm({ propsFormData, userId }) {
   const [pending, startTransition] =  useTransition();
   const [formData, setFormData] = useState({
     file: null,
-    name: propsFormData.name,
-    email: propsFormData.email,
-    companyId: propsFormData.companyId
+    name: propsFormData.name?propsFormData.name:"",
+    email: propsFormData.email?propsFormData.email:"",
+    companyId: propsFormData.companyId?propsFormData.companyId:""
   });
 
   const [message, setMessage] = useState("");

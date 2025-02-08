@@ -3,9 +3,9 @@ import React from 'react'
 import ListAllCompany from '@/components/ListAllCompany';
 const AllCompany = async() => {
 
-    
-// console.log("AllCompanyList.....")
-// console.log(AllCompanyList)
+  const DB_HOST = process.env.DB_HOST;
+console.log("DB_HOST.....")
+console.log(DB_HOST)
   return (
     <div>
       <ListAllCompany />

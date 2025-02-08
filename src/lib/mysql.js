@@ -9,10 +9,10 @@ import mysql from 'mysql2';
 
 
 const connection = mysql.createConnection({
-  host: 'sql12.freesqldatabase.com',  // your MySQL host (localhost if it's on your machine)
-  user: 'sql12761710',       // your MySQL username
-  password: 'Ty5vdmWhvw',       // your MySQL password
-  database: 'sql12761710',  // your database name
+  host: process.env.DB_HOST,  // your MySQL host (localhost if it's on your machine)
+  user: process.env.DB_USER,       // your MySQL username
+  password: process.env.DB_PASSWORD,       // your MySQL password
+  database: process.env.DB_DATABASE,  // your database name
 });
 
 export default connection;

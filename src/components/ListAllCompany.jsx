@@ -9,13 +9,13 @@ const ListAllCompany = ({}) => {
   
   useEffect(() => {
       // Fetch users from the API
-      fetch('/api/company')
+      fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/company`)
         .then((response) => response.json())
         .then((data) => setAllCompany(data))
         .catch((error) => console.error('Error fetching data:', error));
     }, []);
     
-    console.log("allCompany......")
+    console.log("allCompany test......")
     console.log(allCompany)
     async function deleteCompany(companyId) {
       console.log("companyId.......")

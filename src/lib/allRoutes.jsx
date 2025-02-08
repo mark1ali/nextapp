@@ -40,6 +40,7 @@
     return res.json(); // Return user data
   }
   export async function getCompany(companyId) {
+    console.log(`NEXT_PUBLIC_API_BASE_URL test - ${process.env.NEXT_PUBLIC_API_BASE_URL}`)
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/company?id=${companyId}`);
     if (!res.ok) {
       throw new Error('companyId not found');

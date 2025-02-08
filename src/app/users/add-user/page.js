@@ -1,9 +1,5 @@
 "use client";
-import { redirect } from 'next/navigation';
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { toast } from "sonner";
-import Image from "next/image";
 import UserForm from '../../../components/UserForm';
 
 export default function AddUser() {

@@ -1,5 +1,3 @@
-
-
 import EditCompanyForm from '@/components/EditCompanyForm';
 import { getCompany } from '@/lib/allRoutes';
 

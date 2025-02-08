@@ -26,7 +26,9 @@
     return res.json(); // Return user data
   }
   export async function getAllUserWithCompany() {
-    const res = await fetch(`${API_BASE_URL}/api/users?res=withCompany`);
+    const res = await fetch(`${API_BASE_URL}/api/users?res=withCompany`,{
+      cache: "no-store"
+    });
     if(!res.ok) {
       throw new Error("User not found");
     }
